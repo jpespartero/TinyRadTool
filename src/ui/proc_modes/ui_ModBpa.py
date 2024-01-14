@@ -1,6 +1,6 @@
 import  os
 import  pyqtgraph as pg
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 import  numpy as np
 import  src.logger.Logger as Logger
 

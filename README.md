@@ -42,7 +42,7 @@ The EV-TINYRAD24G is a radar evaluation module that allows the implementation an
 
 | Dependency    | Version        | Link         |
 | ------------- | -------------  |------------- |
-| PyQt5         |5.15.7          |              |
-| numpy         |  1.10.4        |              |
+| PyQt6         | 6.6.1          |              |
+| numpy         | 1.10.4         |              |
 | pyqtgraph     | 0.9.10         |              |
 | pyusb         | 1.2.1          |              |

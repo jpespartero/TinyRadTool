@@ -2,7 +2,7 @@ import os
 import sys
 import re
 import pickle
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 import src.ui.ui_fwupgrd as ui_fwupgrd
 import  src.logger.Logger as Logger
 import hashlib

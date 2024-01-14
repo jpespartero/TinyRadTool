@@ -1,4 +1,4 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 import  pyqtgraph as pg
 import  src.ui.ui_Strtup as ui_Strtup
 import  re

@@ -1,7 +1,7 @@
 import  os
 import  pyqtgraph as pg
 import  numpy as np
-import  PyQt5.QtGui as QtGui
+import  PyQt6.QtGui as QtGui
 
 class ui_ModTarDet(object):
     def setupUi(self, ModTarDet):

@@ -1,7 +1,7 @@
 import  os
 import  pyqtgraph as pg
 import  numpy as np
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 
 
 class   Ui_ModFmcw(object):

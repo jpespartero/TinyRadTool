@@ -5,7 +5,7 @@ import  src.logger.Logger as Logger
 import  src.cmd_modules.StrConv as StrConv
 
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 import  threading as threading
 import  numpy as np
 import  src.ui.proc_modes.ui_ModRangeDoppler as ui_ModRangeDoppler

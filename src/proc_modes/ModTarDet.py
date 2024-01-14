@@ -2,7 +2,7 @@ import  src.cmd_modules.TinyRad as TinyRad
 import  src.S14.S14_ModTarDet as S14_ModTarDet
 import  src.logger.Logger as Logger
 import  src.cmd_modules.StrConv as StrConv
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 import  threading as threading
 import  numpy as np
 import  src.ui.proc_modes.ui_ModTarDet as ui_ModTarDet

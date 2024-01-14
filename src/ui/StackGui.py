@@ -13,7 +13,7 @@ import  src.ui.StrtupBrd as StrtupBrd
 import  src.ui.fwupgrd as FwUpgrdDialog
 import  src.cmd_modules.TinyRad as TinyRad
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 
 import  numpy as np
 

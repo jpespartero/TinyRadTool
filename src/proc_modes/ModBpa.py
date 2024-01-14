@@ -4,7 +4,7 @@ import  src.S14.S14_ModBpa as S14_ModBpa
 import  src.logger.Logger as Logger
 import  src.cmd_modules.StrConv as StrConv
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 import  pyqtgraph as pg
 import  threading as threading
 import  time as time

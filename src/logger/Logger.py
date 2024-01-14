@@ -1,4 +1,4 @@
-from    PyQt5 import QtCore, QtGui
+from    PyQt6 import QtCore, QtGui
 import  threading as threading
 
 class Logger(QtCore.QObject):

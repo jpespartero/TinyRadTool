@@ -5,7 +5,7 @@ import  src.proc_modes.ThreadTableModel as ThreadTableModel
 
 import  src.cmd_modules.TinyRad as TinyRad
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 import  pyqtgraph as pg
 
 import  threading as threading

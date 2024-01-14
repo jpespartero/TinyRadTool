@@ -7,7 +7,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt6 import QtCore, QtGui, QtWidgets
 
 class Ui_AboutDialog(object):
     def setupUi(self, AboutDialog):
@@ -121,7 +121,7 @@ class Ui_AboutDialog(object):
         self.label.setText(QtWidgets.QApplication.translate("AboutDialog", "Version", None))
         self.label_version.setText(QtWidgets.QApplication.translate("AboutDialog", "TextLabel", None))
         self.label_3.setText(QtWidgets.QApplication.translate("AboutDialog", "TinyRadTool uses:", None))
-        self.label_2.setText(QtWidgets.QApplication.translate("AboutDialog", "<html><head/><body><p><a href=\"https://pypi.org/project/PyQt5/\"><span style=\" text-decoration: underline; color:#0000ff;\">https://pypi.org/project/PyQt5//</span></a></p></body></html>", None))
+        self.label_2.setText(QtWidgets.QApplication.translate("AboutDialog", "<html><head/><body><p><a href=\"https://pypi.org/project/PyQt6/\"><span style=\" text-decoration: underline; color:#0000ff;\">https://pypi.org/project/PyQt6//</span></a></p></body></html>", None))
         self.label_pyqtgraph.setText(QtWidgets.QApplication.translate("AboutDialog", "<html><head/><body><p><a href=\"http://www.pyqtgraph.org/\"><span style=\" text-decoration: underline; color:#0000ff;\">http://www.pyqtgraph.org/</span></a></p></body></html>", None))
         self.label_cxfreeze.setText(QtWidgets.QApplication.translate("AboutDialog", "<html><head/><body><p><a href=\"http://cx-freeze.sourceforge.net/\"><span style=\" text-decoration: underline; color:#0000ff;\">http://cx-freeze.sourceforge.net/</span></a></p></body></html>", None))
         self.pushButton_close.setText(QtWidgets.QApplication.translate("AboutDialog", "Close", None))

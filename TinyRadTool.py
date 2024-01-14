@@ -2,7 +2,7 @@
 import  src.ui.StackGui as StackGui
 
 
-from PyQt5 import QtGui, QtCore, QtWidgets
+from PyQt6 import QtGui, QtCore, QtWidgets
 
 def main():
     app     =   QtWidgets.QApplication([])
