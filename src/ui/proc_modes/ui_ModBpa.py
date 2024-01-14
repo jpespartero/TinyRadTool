@@ -102,7 +102,7 @@ class   Ui_ModBpa(object):
         self.Layout_Cfg.addWidget(self.Edit_Cfg_AngWinType, 17, 2)  
 
 
-        self.spacerItem     = QtWidgets.QSpacerItem(20, 23, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.spacerItem     = QtWidgets.QSpacerItem(20, 23, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.spacerWidget   = QtWidgets.QWidget()
         self.spacerLayout   = QtWidgets.QVBoxLayout()
         self.spacerLayout.addItem(self.spacerItem)

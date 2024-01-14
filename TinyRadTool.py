@@ -9,7 +9,7 @@ def main():
     Win     =   StackGui.StackGui()
     Win.show()
     app.aboutToQuit.connect(Win.cleanUp)
-    ret = app.exec_()
+    ret = app.exec()
     return 0
 
 

@@ -73,7 +73,7 @@ class StrtupBrd(QtWidgets.QDialog, ui_Strtup.Ui_Strtup):
 
         if not AnaFiles:
             palette     = QtGui.QPalette()
-            palette.setColor(QtGui.QPalette.Foreground, QtCore.Qt.darkRed)
+            palette.setColor(QtGui.QPalette.ColorRole.WindowText, QtCore.Qt.GlobalColor.darkRed)
             self.label.setPalette(palette)             
             self.label.setText("No configuration files and configuration folder c:/Tools/TinyRadTool/ does not exist !")
             self.ComboBox_Select.setDisabled(True)
@@ -112,9 +112,12 @@ class StrtupBrd(QtWidgets.QDialog, ui_Strtup.Ui_Strtup):
         self.WidgetPic.setLayout(self.Logo_Layout)
 
     def CenterWindow(self):
-        screen              = QtWidgets.QApplication.desktop().screenNumber(QtWidgets.QApplication.desktop().cursor().pos())
-        centerPoint         = QtWidgets.QApplication.desktop().screenGeometry(screen).center()
-        self.move(centerPoint.x() - self.width() * 0.5, centerPoint.y() - self.height() * 0.5)
+        None
+        # Center removed as I could not find an equivalent for PyQt6
+        # TODO: Recreate function compatible with PyQt6
+        #screen              = QtWidgets.QApplication.desktop().screenNumber(QtWidgets.QApplication.desktop().cursor().pos())
+        #centerPoint         = QtWidgets.QApplication.desktop().screenGeometry(screen).center()
+        #self.move(centerPoint.x() - self.width() * 0.5, centerPoint.y() - self.height() * 0.5)
 
     def ActionButtonOkay(self):
         if self.FilesAvailable:
