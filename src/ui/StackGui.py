@@ -46,7 +46,7 @@ class   StackGui(QtWidgets.QMainWindow):
         self.hTinyRad = TinyRad.TinyRad()
         
         Dialog = StrtupBrd.StrtupBrd(self)
-        Dialog.exec_()
+        Dialog.exec()
         
         if self.GuiAgree:
 
@@ -175,35 +175,35 @@ class   StackGui(QtWidgets.QMainWindow):
         print("Mode changed: %s" % Txt)
 
     def InitMenu(self):
-        exitAction = QtWidgets.QAction(QtGui.QIcon('exit.png'), '&Exit',self)
+        exitAction = QtGui.QAction(QtGui.QIcon('exit.png'), '&Exit',self)
         exitAction.setShortcut('Ctrl+Q')
         exitAction.setStatusTip('Exit application')
-        exitAction.triggered.connect(QtWidgets.qApp.quit)
+        exitAction.triggered.connect(QtWidgets.QApplication.quit)
 
         if self.GuiEnaViewStatus:
-            SysAction      = QtWidgets.QAction('System Config',self)
+            SysAction      = QtGui.QAction('System Config',self)
             SysAction.triggered.connect(self.setStatusWindow)
 
         menubar = self.menuBar()
         sysMenu = menubar.addMenu('&System')
         if self.GuiEnaViewStatus:
             sysMenu.addAction(SysAction)
-        fwUpdate = QtWidgets.QAction('&Firmware Upgrade', self)
+        fwUpdate = QtGui.QAction('&Firmware Upgrade', self)
         fwUpdate.triggered.connect(self.openFwUpgrdDialog)
         sysMenu.addAction(fwUpdate)
         sysMenu.addAction(exitAction)
         modMenu = menubar.addMenu('&Modes')
 
         if self.GuiEnaViewFmcw and self.LicenseIsValid:
-            modFMCW         = QtWidgets.QAction('&FMCW',self)
+            modFMCW         = QtGui.QAction('&FMCW',self)
             modFMCW.setShortcut('Ctrl+2')
             modFMCW.triggered.connect(self.setFmcwWindow)
         if self.GuiEnaViewRangeDoppler and self.LicenseIsValid:
-            modRangeDoppler = QtWidgets.QAction('&Range-Doppler',self)
+            modRangeDoppler = QtGui.QAction('&Range-Doppler',self)
             modRangeDoppler.setShortcut('Ctrl+3')
             modRangeDoppler.triggered.connect(self.setRangeDopplerWindow)
         if self.GuiEnaViewDBF and self.LicenseIsValid:
-            modDBF          = QtWidgets.QAction('&DBF',self)
+            modDBF          = QtGui.QAction('&DBF',self)
             modDBF.setShortcut('Ctrl+4')
             modDBF.triggered.connect(self.setDBFWindow)
         if self.GuiEnaViewTarDet and self.LicenseIsValid:
@@ -211,10 +211,10 @@ class   StackGui(QtWidgets.QMainWindow):
             modTarDet.setShortcut('Ctrl+5')
             modTarDet.triggered.connect(self.setTarDetWindow)            
         if self.GuiEnaViewCal and self.LicenseIsValid:
-            modCal          = QtWidgets.QAction('&Calibration',self)
+            modCal          = QtGui.QAction('&Calibration',self)
             modCal.triggered.connect(self.SetCalWindow)
         if self.GuiEnaViewPerf and self.LicenseIsValid:
-            modPerf          = QtWidgets.QAction('&Performance Estimation',self)
+            modPerf          = QtGui.QAction('&Performance Estimation',self)
             modPerf.triggered.connect(self.SetPerfWindow)            
 
         if self.GuiEnaViewFmcw and self.LicenseIsValid:
@@ -231,7 +231,7 @@ class   StackGui(QtWidgets.QMainWindow):
             modMenu.addAction(modPerf)
 
 
-        infoAbout = QtWidgets.QAction('&About',self)
+        infoAbout = QtGui.QAction('&About',self)
         infoAbout.triggered.connect(self.openAboutDialog)
         infoMenu = menubar.addMenu('&Info')
         infoMenu.addAction(infoAbout)
@@ -240,7 +240,7 @@ class   StackGui(QtWidgets.QMainWindow):
 
     def openSetupDialog(self):
         u = setupBoard.SetupBoard(self)
-        if u.exec_() == QtGui.QDialog.Accepted:
+        if u.exec() == QtGui.QDialog.Accepted:
             pass
             #print("dialog accept")
             # update view/info:
@@ -294,16 +294,19 @@ class   StackGui(QtWidgets.QMainWindow):
 
     def openAboutDialog(self):
         u = aboutdialog.AboutDialog()
-        u.exec_()
+        u.exec()
 
     def openFwUpgrdDialog(self):
         u = FwUpgrdDialog.FwUpgrdDialog(self)
-        u.exec_()
+        u.exec()
 
     def center(self):
-        screen = QtWidgets.QApplication.desktop().screenNumber(QtWidgets.QApplication.desktop().cursor().pos())
-        centerPoint = QtWidgets.QApplication.desktop().screenGeometry(screen).center()
-        self.move(centerPoint.x() - self.width() * 0.5, centerPoint.y() - self.height() * 0.5)
+        None
+        # Center removed as I could not find an equivalent for PyQt6
+        # TODO: Recreate function compatible with PyQt6
+        #screen = QtWidgets.QApplication.desktop().screenNumber(QtWidgets.QApplication.desktop().cursor().pos())
+        #centerPoint = QtWidgets.QApplication.desktop().screenGeometry(screen).center()
+        #self.move(centerPoint.x() - self.width() * 0.5, centerPoint.y() - self.height() * 0.5)
 
     def cleanUp(self):
         for i in self.__dict__:

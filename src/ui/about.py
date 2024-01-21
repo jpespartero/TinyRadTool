@@ -26,10 +26,13 @@ class AboutDialog(QtWidgets.QDialog, ui_about.Ui_AboutDialog):
 
 
     def center(self):
+        None
+        # Center removed as I could not find an equivalent for PyQt6
+        # TODO: Recreate function compatible with PyQt6
         """ Moves the Dialog to the center of the screen """
-        screen = QtWidgets.QApplication.desktop().screenNumber(QtWidgets.QApplication.desktop().cursor().pos())
-        centerPoint = QtWidgets.QApplication.desktop().screenGeometry(screen).center()
-        self.move(centerPoint.x() - self.width() * 0.5, centerPoint.y() - self.height() * 0.5)
+        #screen = QtWidgets.QApplication.desktop().screenNumber(QtWidgets.QApplication.desktop().cursor().pos())
+        #centerPoint = QtWidgets.QApplication.desktop().screenGeometry(screen).center()
+        #self.move(centerPoint.x() - self.width() * 0.5, centerPoint.y() - self.height() * 0.5)
 
 
     def assignWidgets(self):

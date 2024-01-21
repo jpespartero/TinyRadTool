@@ -122,7 +122,7 @@ class Ui_ModRangeDoppler(object):
         self.Layout_Cfg.addWidget(self.Label_Cfg_VelWinType, 20, 1)
         self.Layout_Cfg.addWidget(self.Edit_Cfg_VelWinType, 20, 2)        
 
-        self.spacerItem     = QtWidgets.QSpacerItem(20, 23, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.spacerItem     = QtWidgets.QSpacerItem(20, 23, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.spacerWidget   = QtWidgets.QWidget()
         self.spacerLayout   = QtWidgets.QVBoxLayout()
         self.spacerLayout.addItem(self.spacerItem)

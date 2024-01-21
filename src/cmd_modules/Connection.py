@@ -253,7 +253,7 @@ class Connection():
                 self.usbDev = usb.core.find(idVendor=0x064B, idProduct=0x7823);
                 if self.usbDev is None:
                     self.hCon = -1;
-                    raise IOError('Device not found.');
+                    #raise IOError('Device not found.');
                 else:
                     self.usbDev.reset();
                     self.hCon = 1;

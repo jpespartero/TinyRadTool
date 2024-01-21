@@ -166,7 +166,7 @@ class   Ui_ModCal(object):
         self.Layout_CalCfg.addWidget(self.Label_CalCfg_RadDur, 9, 1)
         self.Layout_CalCfg.addWidget(self.Edit_CalCfg_RadDur, 9, 2)
 
-        self.spacerItem = QtWidgets.QSpacerItem(20, 23, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.spacerItem = QtWidgets.QSpacerItem(20, 23, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.spacerWidget = QtWidgets.QWidget()
         self.spacerLayout = QtWidgets.QVBoxLayout()
         self.spacerLayout.addItem(self.spacerItem)

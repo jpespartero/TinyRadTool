@@ -45,10 +45,10 @@ class ModRangeDoppler(QtWidgets.QMainWindow, ui_ModRangeDoppler.Ui_ModRangeDoppl
         self.Button_Meas_Ini.clicked.connect(self.Button_Ini_StartThread)
         self.ChkBox_Histog.clicked.connect(self.ChkBox_Histog_stateChanged)
         
-        QtWidgets.QShortcut(QtGui.QKeySequence("F10"), self.Widget_Meas, self.toggleHistog)
-        QtWidgets.QShortcut(QtGui.QKeySequence("ALT+F2"), self.Widget_Meas, self.ToggleCmd)        
-        QtWidgets.QShortcut(QtGui.QKeySequence("Up"), self.Widget_Meas, self.SetCmdTxtUp)
-        QtWidgets.QShortcut(QtGui.QKeySequence("Down"), self.Widget_Meas, self.SetCmdTxtDown)
+        QtGui.QShortcut(QtGui.QKeySequence("F10"), self.Widget_Meas, self.toggleHistog)
+        QtGui.QShortcut(QtGui.QKeySequence("ALT+F2"), self.Widget_Meas, self.ToggleCmd)        
+        QtGui.QShortcut(QtGui.QKeySequence("Up"), self.Widget_Meas, self.SetCmdTxtUp)
+        QtGui.QShortcut(QtGui.QKeySequence("Down"), self.Widget_Meas, self.SetCmdTxtDown)
         
         self.Button_LogtoFile.clicked.connect(self.Button_LogToFile_Clicked)
         self.Button_ClearLog.clicked.connect(self.Button_ClearLog_Clicked)
